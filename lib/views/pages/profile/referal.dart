@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:upai_app/views/pages/profile/aboutReferal.dart';
 import 'package:upai_app/views/pages/profile/allReferal.dart';
 import 'package:upai_app/widgets/appBar2.dart';
 
@@ -421,6 +422,9 @@ class _ReferalState extends State<Referal> {
                       fontSize: 24,
                       fontWeight: FontWeight.w400)),
               GestureDetector(
+                onTap: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder:(context)=>AboutReferal()));
+                },
                 child: Image.asset('assets/img/prof/bussines/questionIcon.png',width: 20,height: 20),
               ),
             ],
