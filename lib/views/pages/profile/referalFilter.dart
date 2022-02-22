@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:upai_app/views/pages/profile/sort.dart';
 import 'package:upai_app/widgets/appBar2.dart';
 
 class ReferalFilter extends StatefulWidget {
@@ -21,7 +22,7 @@ class _ReferalFilterState extends State<ReferalFilter> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ListTile(
-              leading: Text('Мои рефералы',
+              leading: Text('Сортировать',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 24,
@@ -68,7 +69,7 @@ class _ReferalFilterState extends State<ReferalFilter> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 91.0),
               child: GestureDetector(
-                // onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Zayavka())),
+                onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Sort())),
                 child: Container(
                   height: 44,
                   decoration: BoxDecoration(
