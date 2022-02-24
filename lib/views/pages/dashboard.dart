@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:upai_app/views/pages/hotKesh.dart';
 import 'package:upai_app/widgets/UserAvatar.dart';
 import 'package:upai_app/widgets/appBar.dart';
 
@@ -503,86 +504,89 @@ class _DashboardState extends State<Dashboard> {
 
   Widget HotKesh(
       int image, double rat, int otzyv, String name, String cat, int kesh) {
-    return Container(
-      width: 200,
-      child: Column(
-        children: [
-          Container(
-            width: 200,
-            height: 85,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                    width: 2.5, color: Color(0xFF929292).withOpacity(0.37)),
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: 7,
-                      offset: Offset(0, 6),
-                      color: Color(0x33000000))
-                ],
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage('assets/img/hotKesh/kesh$image.jpg'))),
-          ),
-          SizedBox(height: 12),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      RatingBar.builder(
-                          initialRating: rat,
-                          itemSize: 12,
-                          itemBuilder: (context, _) => Icon(
-                                Icons.star,
-                                color: Color(0xFFFF0707),
-                              ),
-                          onRatingUpdate: (rating) {
-                            setState(() {
-                              rat = rating;
-                            });
-                          }),
-                      SizedBox(width: 2.5),
-                      Text(
-                        '$rat',
-                        style:
-                            TextStyle(color: Color(0xFFFF0707), fontSize: 12),
-                      ),
-                      SizedBox(width: 2),
-                      Text(
-                        '($otzyv отзыва)',
-                        style:
-                            TextStyle(color: Color(0xFF313131), fontSize: 10),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    name,
-                    style: TextStyle(color: Color(0xFF313131), fontSize: 12),
-                  ),
-                  SizedBox(height: 5),
-                  Text(
-                    cat,
-                    style: TextStyle(color: Color(0xFF8D8D8D), fontSize: 10),
-                  )
-                ],
-              ),
-              SizedBox(width: 22),
-              Container(
-                width: 25,
-                child: Text(
-                  'до $kesh%',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Color(0xFF27AE60), fontSize: 10),
+    return GestureDetector(
+      onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(context)=>HotKeshPage())),
+      child: Container(
+        width: 200,
+        child: Column(
+          children: [
+            Container(
+              width: 200,
+              height: 85,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                      width: 2.5, color: Color(0xFF929292).withOpacity(0.37)),
+                  boxShadow: [
+                    BoxShadow(
+                        blurRadius: 7,
+                        offset: Offset(0, 6),
+                        color: Color(0x33000000))
+                  ],
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage('assets/img/hotKesh/kesh$image.jpg'))),
+            ),
+            SizedBox(height: 12),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        RatingBar.builder(
+                            initialRating: rat,
+                            itemSize: 12,
+                            itemBuilder: (context, _) => Icon(
+                                  Icons.star,
+                                  color: Color(0xFFFF0707),
+                                ),
+                            onRatingUpdate: (rating) {
+                              setState(() {
+                                rat = rating;
+                              });
+                            }),
+                        SizedBox(width: 2.5),
+                        Text(
+                          '$rat',
+                          style:
+                              TextStyle(color: Color(0xFFFF0707), fontSize: 12),
+                        ),
+                        SizedBox(width: 2),
+                        Text(
+                          '($otzyv отзыва)',
+                          style:
+                              TextStyle(color: Color(0xFF313131), fontSize: 10),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      name,
+                      style: TextStyle(color: Color(0xFF313131), fontSize: 12),
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      cat,
+                      style: TextStyle(color: Color(0xFF8D8D8D), fontSize: 10),
+                    )
+                  ],
                 ),
-              )
-            ],
-          )
-        ],
+                SizedBox(width: 22),
+                Container(
+                  width: 25,
+                  child: Text(
+                    'до $kesh%',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Color(0xFF27AE60), fontSize: 10),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

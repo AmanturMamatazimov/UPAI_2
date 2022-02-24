@@ -36,9 +36,11 @@ Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
             Text(text1,style: TextStyle(color: Color(0xFF515151),fontSize: 14)),
             SizedBox(height: 7),
             Text(text2,style: TextStyle(color: Color(0xFF515151),fontSize: 14)),
-            SizedBox(height: 90),
+            SizedBox(height: 50),
             Text('Разработано  и поддерживается компанией',textAlign: TextAlign.center,style: TextStyle(color: Color(0xFF4F4F4F),fontSize: 18)),
-            Image.asset('assets/img/oracle.png',width: 109,height: 36)
+            SizedBox(height: 13),
+            Image.asset('assets/img/oracle.png',width: 109,height: 36),
+            SizedBox(height: 50)
           ],
         ),
       ),

@@ -4,6 +4,7 @@ import 'package:upai_app/provider/selectCatProvider.dart';
 import 'package:upai_app/views/auth/sing_in/sing_in_screen.dart';
 import 'package:upai_app/views/category/category.dart';
 import 'package:upai_app/views/category/category_filter.dart';
+import 'package:upai_app/views/drawer/aboutProgram.dart';
 import 'package:upai_app/widgets/UserAvatar.dart';
 
 class DrawerScreen extends StatefulWidget {
@@ -136,6 +137,8 @@ class _DrawerScreenState extends State<DrawerScreen> {
             Padding(
               padding: const EdgeInsets.only(left: 30.0),
               child: ListTile(
+                onTap: ()=>Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context)=>AboutProgram())),
                 title: Text(
                   'О программе',
                   style: TextStyle(color: Color(0xFF515151), fontSize: 16),
