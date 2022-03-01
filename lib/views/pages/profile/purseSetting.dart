@@ -238,6 +238,7 @@ class _PurseSettingState extends State<PurseSetting> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: TextFormField(
+                            keyboardType: TextInputType.number,
                             style: TextStyle(
                               color: Color(0xFF225196),
                               fontSize: 16,
