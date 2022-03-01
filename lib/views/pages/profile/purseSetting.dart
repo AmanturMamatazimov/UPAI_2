@@ -140,19 +140,19 @@ class _PurseSettingState extends State<PurseSetting> {
                               if(purseTab)Row(
                                 children: [
                                   Expanded(
-                                    child: Column(
-                                      children: [
-                                        Image.asset('assets/img/prof/purse/O!.png',width: 18,height: 18),
-                                        SizedBox(height: 14),
-                                        GestureDetector(
-                                          onTap: (){
-                                            setState(() {
-                                              if(currentPurseTap==1) currentPurseTap=0;
-                                              else
-                                              currentPurseTap=1;
-                                            });
-                                          },
-                                          child: Container(
+                                    child: GestureDetector(
+                                      onTap: (){
+                                        setState(() {
+                                          if(currentPurseTap==1) currentPurseTap=0;
+                                          else
+                                            currentPurseTap=1;
+                                        });
+                                      },
+                                      child: Column(
+                                        children: [
+                                          Image.asset('assets/img/prof/purse/O!.png',width: 18,height: 18),
+                                          SizedBox(height: 14),
+                                          Container(
                                             width: 15,
                                             height: 15,
                                             decoration: BoxDecoration(
@@ -163,25 +163,25 @@ class _PurseSettingState extends State<PurseSetting> {
                                             child:currentPurseTap==1? Center(
                                               child: Icon(Icons.check,color: Colors.white,size: 10),
                                             ):null,
-                                          ),
-                                        )
-                                      ],
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Expanded(
-                                    child: Column(
-                                      children: [
-                                        Image.asset('assets/img/prof/purse/balance.png',width: 43,height: 18),
-                                        SizedBox(height: 14),
-                                        GestureDetector(
-                                          onTap: (){
-                                            setState(() {
-                                              if(currentPurseTap==2) currentPurseTap=0;
-                                              else
-                                              currentPurseTap=2;
-                                            });
-                                          },
-                                          child: Container(
+                                    child: GestureDetector(
+                                      onTap: (){
+                                        setState(() {
+                                          if(currentPurseTap==2) currentPurseTap=0;
+                                          else
+                                            currentPurseTap=2;
+                                        });
+                                      },
+                                      child: Column(
+                                        children: [
+                                          Image.asset('assets/img/prof/purse/balance.png',width: 43,height: 18),
+                                          SizedBox(height: 14),
+                                          Container(
                                             width: 15,
                                             height: 15,
                                             decoration: BoxDecoration(
@@ -192,25 +192,25 @@ class _PurseSettingState extends State<PurseSetting> {
                                             child:currentPurseTap==2? Center(
                                               child: Icon(Icons.check,color: Colors.white,size: 10),
                                             ):null,
-                                          ),
-                                        )
-                                      ],
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Expanded(
-                                    child: Column(
-                                      children: [
-                                        Image.asset('assets/img/prof/purse/megaPay.png',width: 63,height: 18),
-                                        SizedBox(height: 14),
-                                        GestureDetector(
-                                          onTap: (){
-                                            setState(() {
-                                              if(currentPurseTap==3) currentPurseTap=0;
-                                              else
-                                              currentPurseTap=3;
-                                            });
-                                          },
-                                          child: Container(
+                                    child: GestureDetector(
+                                      onTap: (){
+                                        setState(() {
+                                          if(currentPurseTap==3) currentPurseTap=0;
+                                          else
+                                            currentPurseTap=3;
+                                        });
+                                      },
+                                      child: Column(
+                                        children: [
+                                          Image.asset('assets/img/prof/purse/megaPay.png',width: 63,height: 18),
+                                          SizedBox(height: 14),
+                                          Container(
                                             width: 15,
                                             height: 15,
                                             decoration: BoxDecoration(
@@ -221,9 +221,9 @@ class _PurseSettingState extends State<PurseSetting> {
                                             child:currentPurseTap==3? Center(
                                               child: Icon(Icons.check,color: Colors.white,size: 10),
                                             ):null,
-                                          ),
-                                        )
-                                      ],
+                                          )
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ],
