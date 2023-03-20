@@ -77,7 +77,7 @@ class _CategoryState extends State<Category> {
           SizedBox(height: 40),
           Stack(
             fit: StackFit.passthrough,
-            overflow: Overflow.clip,
+//            overflow: Overflow.clip,
             children: [
               Padding(
                 padding: const EdgeInsets.only(right: 10.0),

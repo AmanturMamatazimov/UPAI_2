@@ -59,7 +59,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                             color: Color(0x26000000))
                       ]),
                   child: Stack(
-                    overflow: Overflow.visible,
+                    //overflow: Overflow.visible,
                     children: [
                       Container(
                         padding: EdgeInsets.all(8),

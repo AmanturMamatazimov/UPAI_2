@@ -47,7 +47,7 @@ class _ProfileState extends State<Profile> {
                         color: Color(0x26000000))
                   ]),
               child: Stack(
-                overflow: Overflow.visible,
+                //overflow: Overflow.visible,
                 children: [
                   Container(
                     padding: EdgeInsets.all(8),

@@ -16,7 +16,7 @@ class _DashboardState extends State<Dashboard> {
   List<Widget> listN = [
     Stack(
       fit: StackFit.passthrough,
-      overflow: Overflow.visible,
+      //overflow: Overflow.visible,
       children: [
         Container(
           width: 332,
@@ -78,7 +78,7 @@ class _DashboardState extends State<Dashboard> {
     ),
     Stack(
       fit: StackFit.passthrough,
-      overflow: Overflow.visible,
+      //overflow: Overflow.visible,
       children: [
         Container(
           width: 332,
@@ -140,7 +140,7 @@ class _DashboardState extends State<Dashboard> {
     ),
     Stack(
       fit: StackFit.passthrough,
-      overflow: Overflow.visible,
+      //overflow: Overflow.visible,
       children: [
         Container(
           width: 332,

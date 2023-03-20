@@ -52,7 +52,6 @@ class _HotKeshAddState extends State<HotKeshAdd> {
                         color: Color(0x26000000))
                   ]),
               child: Stack(
-                overflow: Overflow.visible,
                 children: [
                   Container(
                     padding: EdgeInsets.all(8),
